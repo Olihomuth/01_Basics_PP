@@ -3,8 +3,8 @@
 
 // Deklaration
 let ageJohn, ageMark;
-const birthYearJohn = 2000;
-const birthYearMark = 1990;
+const birthYearJohn = 1980;
+const birthYearMark = 1980;
 
 // Berechnung Alter
 // let year = 2025;
@@ -28,7 +28,7 @@ const birthYearMark = 1990;
 // Berechnung Alter Iteration III
 
 let year = new Date().getFullYear();
-console.log("Jahr: " + year);
+// console.log("Jahr: " + year);
 ageJohn = year - birthYearJohn;
 ageMark = year - birthYearMark;
 
@@ -36,3 +36,10 @@ ageMark = year - birthYearMark;
 console.log("ageJohn: " + ageJohn);
 console.log("ageMark: " + ageMark);
 
+//Deklaration / Tests / Aussagenlogik
+//let isJohnOlder = true;
+let isJohnOlder = (ageJohn > ageMark);  // Test auf ungleichheit
+let isJohnEqual = (ageJohn == ageMark); // Test auf Gleichheit
+
+console.log("isJohnOlder: " + isJohnOlder);
+console.log("isJohnOlder: " + isJohnEqual);
