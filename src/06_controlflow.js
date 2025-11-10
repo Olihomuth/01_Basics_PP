@@ -18,3 +18,11 @@ isJohnEqual = (ageJohn == ageMark);
 // console.log("isJohnEqual: " + isJohnEqual);
 // console.log("------------------");
 
+// if(true)             // Wahrheitswerte
+// if(false)            
+// if(isJohnOlder)      // Verweis
+if(ageJohn > ageMark)   // direkter Test
+{
+   console.log("John is älter."); 
+}
+
