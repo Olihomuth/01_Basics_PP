@@ -13,3 +13,18 @@ function test()
     console.log("Hallo, Kevin!");
 }
 
+/***** Funktionen 02a *****/
+// 2a. Parametrisierung + Datenübergabe von INNEN
+
+// Call
+// ausgabeNamen();
+
+// Funktion
+function ausgabeNamen() {
+    // interne Variable | What happens in VEGAS ...
+    let firstName = "Kevin";
+    console.log("Hallo, " + firstName + "!");
+}
+
+// console.log(firstName); // Fehler : scope!
+
