@@ -59,7 +59,7 @@ function ausgabeNamen() {
 // Postulat: one function = one job (uncle Bob)
 // SRP single responsibility principle
 
-ausgabeNamenSRP("Max","Mütze");
+// ausgabeNamenSRP("Max","Mütze");
 
 function ausgabeNamenSRP(firstName, familyName) {
 
@@ -72,3 +72,27 @@ function ausgabeNamenSRP(firstName, familyName) {
 
 }
 
+/***** Funktionen 03b *****/
+// Verantwortlichkeiten in getrennten Funktionen auslagern
+
+// 1st Responsibility: string composing
+
+output(getString("Max", "Mütze"))
+const prompt = require('prompt-sync')({sigint: true});
+output(getString(prompt("Vorname: "), prompt("Name?: ")));
+
+function getString(firstName, familyName) {
+    const GAP = " ";
+    let outputStr = "Hallo, " + firstName + GAP + familyName + "!"
+    return(outputStr); // Fkt.: - OUTPUT sendet Daten zum call
+}
+
+
+// 2nd Responsibility: string output
+// output("hi");
+// output(2);
+// output(true);
+function output(outputData) {
+    console.log(outputData);
+
+}
