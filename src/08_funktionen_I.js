@@ -39,3 +39,18 @@ function ausgabeNamen2(firstName) {  // Parameter
     console.log("Hallo, " + firstName + "!");
 }
 
+/***** Funktionen 02c *****/
+// 2c. Mehrere Parameter / Argumente
+
+ausgabeNamen3("Max","Mütze");
+ausgabeNamen3("Maxine","Mützerich");
+
+// Argumente werden von prompt() geliefert
+const prompt = require('prompt-sync')({sigint: true});
+ausgabeNamen3(prompt("Vorname: "),prompt("Name: "));
+
+
+function ausgabeNamen3(firstName, familyName) {  // Parameter
+    console.log("Hallo, " + firstName + " " + familyName + "!");
+}
+
