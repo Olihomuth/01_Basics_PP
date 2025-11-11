@@ -35,22 +35,40 @@ function ausgabeNamen() {
 // ausgabeNamen2("Klaus");
 // ausgabeNamen2("Ibrahim");
 
-function ausgabeNamen2(firstName) {  // Parameter
-    console.log("Hallo, " + firstName + "!");
-}
+// function ausgabeNamen2(firstName) {  // Parameter
+//     console.log("Hallo, " + firstName + "!");
+// }
 
 /***** Funktionen 02c *****/
 // 2c. Mehrere Parameter / Argumente
 
-ausgabeNamen3("Max","Mütze");
-ausgabeNamen3("Maxine","Mützerich");
+// ausgabeNamen3("Max","Mütze");
+// ausgabeNamen3("Maxine","Mützerich");
 
 // Argumente werden von prompt() geliefert
-const prompt = require('prompt-sync')({sigint: true});
-ausgabeNamen3(prompt("Vorname: "),prompt("Name: "));
+// const prompt = require('prompt-sync')({sigint: true});
+// ausgabeNamen3(prompt("Vorname: "),prompt("Name: "));
 
 
-function ausgabeNamen3(firstName, familyName) {  // Parameter
-    console.log("Hallo, " + firstName + " " + familyName + "!");
+// function ausgabeNamen3(firstName, familyName) {  // Parameter
+//     console.log("Hallo, " + firstName + " " + familyName + "!");
+// }
+
+/***** Funktionen 03a *****/
+// 03a. Vorbereitung -Trennen der Verantwortlichkeiten
+// Postulat: one function = one job (uncle Bob)
+// SRP single responsibility principle
+
+ausgabeNamenSRP("Max","Mütze");
+
+function ausgabeNamenSRP(firstName, familyName) {
+
+    // 1st Responsibility: string composing
+    const GAP = " ";
+    let outputStr = "Hallo, " + firstName + GAP + familyName + "!"
+
+    // 2nd Responsibility: string output
+    console.log(outputStr);
+
 }
 
