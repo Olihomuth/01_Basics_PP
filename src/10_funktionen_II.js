@@ -9,6 +9,9 @@
 3. Fkt. Grundrechenarten : 
 4. Ausgabe in Konsole : 
 */
+const ERROR_STR_DIV = "Teilen durch 0 nicht möglich";
+ 
+
 
 // module: division a / b |  test:
 output(divide(4,2));
@@ -18,11 +21,20 @@ output(divide(0,2));
 output(divide(3,0));
 output(divide(0,0));
 function divide(a, b) {
+
+	// 1. Iteration
+	//if (b == 0) {
+	//	return "Teilen durch 0 nicht möglich";
+	//} else {
+	//	return a/b;
+	//}
+
+	// 2. Iteration
 	if (b == 0) {
-		return "Teilen durch 0 nicht möglich";
-	} else {
-		return a/b;
+		return ERROR_STR_DIV; //Ausnahme
 	}
+
+	return a/b;  //Regel
 }
 
 
