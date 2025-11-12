@@ -20,7 +20,7 @@ const prompt = require('prompt-sync')({sigint: true});
 
 console.log("------");
 console.log("Herzlich Willkommen bei MD, Ihre Bestellung bitte!");
-console.log("Hamburger(1), Hamburger(2), oder Chilliburger(3)?");
+console.log("Hamburger(1), Cheeseburger(2), oder Chilliburger(3)?");
 choice = parseInt(prompt("Ihre Auswahl?: "));
 
 switch (choice) {
